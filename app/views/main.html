@@ -1,0 +1,59 @@
+<div data-ng-init="init()">
+<div class="form-group" style="margin: 0px 16px 30px 22px;">
+    <div class="col-lg-12 col-md-12">
+        <button class="button button1 pull-right" data-ng-click="modifyRedirect()"> &nbsp;&nbsp;&nbsp;<i class="fa fa-arrows" style="color: gray;"></i> + Add&nbsp;&nbsp; &nbsp;</button>
+    </div>
+</div>
+<div class="form-group" data-ng-if="detailsArray.length!==0" style="margin: 0px 16px 30px 22px;" data-ng-repeat="dtl in detailsArray">
+  <div class="col-lg-4 col-md-4 " style="margin-bottom: 10px; margin-top: 10px;">
+    <div class="card">
+      <div class="col-lg-12 col-md-12">
+        <div class="col-lg-4 col-md-4">
+            <img src="../images/yeoman.png" alt="Avatar" style="width:100%">
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h4><b>{{dtl.name}}</b></h4> 
+            <span>{{dtl.des1}}</span>
+        </div>
+      </div>
+  
+      <div class="form-group col-lg-12 col-md-12 borderlines">
+        <p style="margin: 4px 8px 5px 19px;">{{dtl.des2}}</p>
+      </div>
+      <div class="form-group col-lg-12 col-md-12 thin-border">
+          <div class="col-lg-6 col-md-6">
+            <p>{{dtl.dilution}}% dilution</p>
+          </div>
+          <div class="col-lg-6 col-md-6">
+              <p class="pull-right">Committed:{{dtl.committed}}%</p>
+          </div>
+        </div>
+        <div class="form-group col-lg-12 col-md-12 thin-border">
+            <img class="profiler" src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:20%; margin-bottom: 5px; text-align: center;">
+          </div>
+          <div class=" col-lg-12 col-md-12 thin-border" style="margin: 0px 0px 10px 0px; padding:0px 0px 0px 0px; ">
+              <div class="btn-group">
+                  <button>Share</button>
+                  <button>View Detailed Profile</button>
+                  <button>Connect </button>
+                </div>
+          </div>
+          <div class=" col-lg-12 col-md-12 " style="margin: 0px 0px 10px 0px; padding:0px 0px 0px 0px; ">
+              <div class="col-lg-6 col-md-6">
+                  <button class="buttong button1">I am Interested</button>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <button class="button button1"> &nbsp;&nbsp;&nbsp;Skip&nbsp;&nbsp; &nbsp;</button>
+                </div>
+          </div>  
+          <div class="container">
+            
+          </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div  data-ng-if="detailsArray.length === 0">
+    <p class="text-center" style="font-size: 25px">No Data found!!!</p> 
+</div>
+</div>

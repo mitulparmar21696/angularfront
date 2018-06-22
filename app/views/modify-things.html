@@ -1,0 +1,33 @@
+
+<div class="container">
+    <h2>Details</h2>
+    <form name="myForm" role="form" ng-submit="myForm.$valid && saveDetails(myForm)" novalidate>
+      <div class="form-group">
+        <label >Name:</label>
+        <input type="text" class="form-control" data-ng-model="details.name" name="name" placeholder="Enter Name"  required>
+        <span class="text-danger" ng-if="myForm.name.$invalid && myForm.$submitted">The Field is required.</span>
+      </div>
+      <div class="form-group">
+        <label >Description 1:</label>
+        <input type="text" class="form-control" data-ng-model="details.des1" name="des1" placeholder="Enter description 1" required>
+        <span class="text-danger" ng-if="myForm.des1.$invalid && myForm.$submitted">The Field is required.</span>
+    </div>
+      <div class="form-group">
+        <label >Description 1:</label>
+        <input type="text" class="form-control" data-ng-model="details.des2" name="des2" placeholder="Enter Description 2" required>
+        <span class="text-danger" ng-if="myForm.des2.$invalid && myForm.$submitted">The Field is required.</span>
+    </div>
+      <div class="form-group">
+        <label >Dilution:</label>
+        <input type="number" class="form-control" data-ng-model="details.dilution" min="0" max="100" name="dilution" placeholder="Enter Dilution" required>
+        <span class="text-danger" ng-if="myForm.dilution.$invalid && myForm.$submitted">The Field is required.</span>
+    </div>
+      <div class="form-group">
+        <label >Committed:</label>
+        <input type="number" class="form-control" data-ng-model="details.committed" min="0" max="100" name="committed" placeholder="Enter Commit" required>
+        <span class="text-danger" ng-if="myForm.committed.$invalid && myForm.$submitted">The Field is required.</span>
+    </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+      <button class="btn btn-danger" data-ng-click="modifyRedirect()">Cancel</button>
+    </form>
+  </div>
